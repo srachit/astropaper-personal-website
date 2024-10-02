@@ -1,8 +1,9 @@
 import type { APIRoute } from 'astro';
 
-export const GET: APIRoute = async ({ redirect }) => {
+export const GET: APIRoute = async () => {
 
     const html = `<!DOCTYPE html>
+    <html>
     <head>
     <meta http-equiv="refresh" content="0; url=https://pumpkinsforpigs.org/" />
     </head>
@@ -11,7 +12,8 @@ export const GET: APIRoute = async ({ redirect }) => {
       <p>Redirecting to pumpkins for pigs website.</p>
       <p>I setup this redirect to understand the reach of the flyers.</p>
       <p>For concerns contact srachit@gmail.com</p>
-    </body>`;
+    </body>
+    </html>`;
 
     return new Response(html, {
         headers: {
